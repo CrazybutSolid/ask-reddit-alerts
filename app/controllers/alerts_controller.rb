@@ -5,7 +5,7 @@ class AlertsController < ApplicationController
   # GET /alerts
   # GET /alerts.json
   def index
-    @alerts = Alert.all
+    @alerts = current_user.alerts
 
   end
 
@@ -67,7 +67,7 @@ class AlertsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_alert
-      @alert = Alert.find(params[:id])
+      @alert = current_user.alerts.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

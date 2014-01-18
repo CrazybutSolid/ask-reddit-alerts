@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
     @user = alert.user
     @url  = url
     @title = title
-    mail(to: @user.email, subject: 'AskReddit: #{@title}')
+    mail(to: @user.email, subject: "one of your keywords showed up on AskReddit")
   end
 
 end
