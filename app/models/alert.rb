@@ -7,7 +7,7 @@ class Alert < ActiveRecord::Base
 		response = HTTParty.get('http://www.reddit.com/r/askreddit/new.json?sort=new', :headers => {"User-Agent" => APPLICATION_NAME})
 		response['data']['children'].each do |thread|
 			Alert.all.each do |alert|
-				if thread['data']['title'].include?(alert.keyword)
+				if thread['data']['title'].downcase.include?(alert.keyword.downcase)
 					url = thread['data']['url']
 					title = thread['data']['title']
 					UserMailer.notify_new_thread(alert,url,title).deliver
