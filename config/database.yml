@@ -19,7 +19,6 @@ development:
   encoding: unicode
   database: askredditalert_development
   pool: 5
-  username: askredditalert
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,13 +47,5 @@ test:
   encoding: unicode
   database: askredditalert_test
   pool: 5
-  username: askredditalert
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: askredditalert_production
-  pool: 5
-  username: askredditalert
-  password:
