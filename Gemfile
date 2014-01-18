@@ -52,3 +52,9 @@ ruby "2.0.0"
 gem 'devise' #for email validation
 
 gem 'httparty' #for HTTP requests
+
+gem "figaro" #for hiding my variables
+
+gem 'google-analytics-rails'
+
+gem "twitter-bootstrap-rails"
